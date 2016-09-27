@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
+  -webkit-text-size-adjust: none;
+}
+
+a,
+a:hover,
+input,
+textarea,
+select {
+  -webkit-tap-highlight-color: transparent;
+  outline: 0 none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+:focus {
+  outline: 0;
+}
+
+a img,
+fieldset,
+hr {
+  border: 0;
+}
+
+mark {
+  background: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td {
+  vertical-align: middle;
+}
+
+input:hover,
+select:hover,
+textarea:hover,
+a:hover {
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+input,
+select,
+textarea,
+a {
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+input[type="submit"],
+input[type="button"],
+button {
+  -webkit-appearance: none;
+  cursor: pointer;
+  border: none;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: #9e9e9e;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: #9e9e9e;
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+}
+
+hr {
+  clear: both;
+  font-size: 0;
+  overflow: hidden;
+  display: block;
+  height: 0;
+}
+
+p {
+  padding-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}

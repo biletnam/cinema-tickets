@@ -1,0 +1,115 @@
+/*Tablets width from 992px to 1199px*/
+
+@media screen and (max-width: 1199px) {
+  html {
+    font-size: 12px;
+  }
+  /* RESERVE START */
+  .reserve-container {
+    padding: 10px;
+  }
+  /* RESERVE END */
+}
+
+
+/*Smartphones width to 991px*/
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 11px;
+  }
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  /* TICKETS START */
+  .tickets-container {
+    max-width: 100%;
+  }
+  .booking-tickets {
+    max-width: 100%;
+  }
+  /* TICKETS END */
+}
+
+
+/*Small devices width to 767px*/
+
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 10px;
+  }
+  /* RESERVE START */
+  .cinema-screen {
+    margin-bottom: 20px;
+  }
+  .seat {
+    width: 30px;
+    height: 30px;
+    margin: 0 2px;
+  }
+  .seat-back {
+    height: 6px;
+  }
+  /* RESERVE END */
+}
+
+
+/*Small devices width to 580px*/
+
+@media screen and (max-width: 580px) {
+  html {
+    font-size: 9px;
+  }
+  /* RESERVE START */
+  .reserve-container {
+    padding: 0 0 10px 0;
+  }
+  .seat {
+    width: 18px;
+    height: 18px;
+  }
+  .seat:nth-child(2) {
+    margin-top: 5px;
+  }
+  .seat:nth-child(3) {
+    margin-top: 20px;
+  }
+  .seat:nth-child(4) {
+    margin-top: 30px;
+  }
+  .seat:nth-child(5) {
+    margin-top: 40px;
+  }
+  .seat:nth-child(6) {
+    margin-top: 50px;
+  }
+  .seat:nth-child(7) {
+    margin-top: 60px;
+  }
+  .seat:nth-child(8) {
+    margin-top: 60px;
+  }
+  .seat:nth-child(9) {
+    margin-top: 50px;
+  }
+  .seat:nth-child(10) {
+    margin-top: 40px;
+  }
+  .seat:nth-child(11) {
+    margin-top: 30px;
+  }
+  .seat:nth-child(12) {
+    margin-top: 20px;
+  }
+  .seat:nth-child(13) {
+    margin-top: 5px;
+  }
+  .seat-back {
+    height: 4px;
+  }
+  /* RESERVE END */
+}

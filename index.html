@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="bookingApplication" data-ng-controller="mainController">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Квитки на кіно</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+  <script src="js/app.js"></script>
+</head>
+
+<body data-ng-controller="ticketsController">
+
+  <div class="reserve-container noselect">
+    <div class="loader">
+      <img src="img/theater-rewards-oj.svg" alt="loader">
+    </div>
+    <div class="cinema-screen" data-ng-click="clearJson()">Очистити JSON</div>
+    <div class="cinema-hall">
+      <div class="cinema-row" data-ng-repeat="row in hallRows">
+        <div class="seat seat-num-{{seat.number}}" data-ng-repeat="seat in row.seats" data-ng-click="processTicket(seat.row, seat.number)" data-ng-class="{'seat-selected': seat.inProcess && !seat.booked, 'seat-booked': seat.booked}" title="{{seat.price}} грн">{{seat.number}}<span class="seat-back"></span></div>
+        <span>Ряд {{row.number}}</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="tickets-container noselect">
+    <div class="event-title">
+      <h1>Привид опери</h1>
+      <span>( Прем'єра )</span>
+    </div>
+    <p data-ng-hide="ticketsInProcess.length > 0">Щоб придбати квиток, виберіть спочатку місце</p>
+    <div class="booking-container" data-ng-hide="ticketsInProcess.length < 1">
+      <span class="selected-tickets"> {{ticketsInProcess.length == 1 ? ticketsInProcess.length+' киток' : ticketsInProcess.length &lt; 5 ? ticketsInProcess.length+' квитка' : ticketsInProcess.length+' квитків'}} </span>
+      <div class="booking-tickets">
+        <div class="ticket" data-ng-repeat="ticket in ticketsInProcess">
+          <div class="ticket-column">
+            <span class="ticket-column-title">Ряд</span>
+            <span>{{ticket.row}}</span>
+          </div>
+          <div class="ticket-column">
+            <span class="ticket-column-title">Місце</span>
+            <span>{{ticket.number}}</span>
+          </div>
+          <div class="ticket-column">
+            <span class="ticket-column-title">Ціна</span>
+            <span>{{ticket.price}} грн</span>
+          </div>
+          <div class="ticket-remove-column" data-ng-click="processTicket(ticket.row, ticket.number)">
+            <span></span>
+          </div>
+        </div>
+      </div>
+      <div class="tickets-payment" data-ng-hide="ticketsInProcess.length < 1">
+        <span class="payment-title">Сума до сплати:</span>
+        <span class="payment-sum">{{sumTicketsPrice(ticketsInProcess)}} грн</span>
+        <input class="buy-tickets-btn" type="button" value="КУПИТИ" data-ng-click="buyTickets()">
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
