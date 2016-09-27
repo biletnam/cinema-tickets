@@ -2,7 +2,7 @@
 The single page application to purchase tickets online.
 
 ## Application link
-[Link to gh-page](https://nodejs.org/)
+[Link to gh-page](https://simpleoneman.github.io/cinema-tickets/)
 
 
 ### Time spent
